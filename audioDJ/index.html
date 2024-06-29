@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<meta name="author" content="Thomas Dittmar">
+
+<link rel="stylesheet" href="css/audioDJ.css" type="text/css">
+<link rel="icon" href="Symbole/plist2.png">
+
+<script src="js/jq2.js"></script>
+<script src="js/equalizer.js"></script>
+<script src="js/equalizer2.js"></script>
+<script src="js/audioDJ.js"></script>
+
+<style>
+</style>
+</head>
+<body style='background:#2E2E2E; font-family:arial; color:white;'>
+  <center>
+  <div style="width: 800px; height: 220px; background: rgb(75, 8, 138); border-width: 6px; border-style: outset; border-color: navy;" id="audio"></div>
+  </center>
+	
+<script>
+  /*
+ The Configuration "playerID" is for the IDs:
+ audioplayer: player
+ playbuton: playBtn
+ stopbutton: stopBtn
+ button for rewind: rewBtn
+ button for forward: forwBtn
+ button for previous track: skiprewBtn
+ button for next Track: skipforwBtn
+ pitchbutton: pitchbend
+ squishbutton: squishBtn
+ pitchslider: pitchRange
+ button for reverse-play: playRev
+ button for "change to next player": chgPlayer
+ tracknumber: trackNumber
+ track: artist
+ tracktime: tracktime
+ timeprogress: timeProgress
+ pitchvalues: pitchList
+ squishvalues: squishList
+ */
+  $(document).ready(function() {
+	$("#audio").audioDJ({
+      "playerID": 1,
+      "path": "file:///C:/Users/sonvt/Music/",
+      "src": "DJ X-Sonic & Ray - The Hymn Of The Nautilus",
+      "ext": ".mp3",
+      "pitch": false,
+      "pitchrate": 1,
+      "controls": false,
+      "pitchlimit": 2.5,
+      "skiptime": 10,
+      "pitchTime": 120,
+      "squishIntervall": 1,
+      "artistTheme": ["#00ffff", "#7affff", "#00ffff", "#007dff"]
+    });
+  });
+</script>
+</body>
+</html>
